@@ -8,7 +8,7 @@ const Navbar = () => {
                     color: 'white',
                     backgroundColor: 'hotpink',
                     borderRadius: '8px'
-                }}>Add Joke <i class="fa-solid fa-pen-nib" style={{color: "white"}}></i></a>
+                }}>Add Joke <i className="fa-solid fa-pen-nib" style={{color: "white"}}></i></a>
             </div>
         </nav>
     );
