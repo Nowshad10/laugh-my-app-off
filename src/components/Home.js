@@ -8,9 +8,14 @@ const Home = () => {
         { title: 'Gas Giant', body: "Today, I learned that the average human farts 15 times a day. I fart more than that within the first hour of the day, and thats even after not eating anything for three days.", author: 'blogman77', id: 3 }
     ]);
 
+    const deletePost = (id) => {
+        const newPosts = posts.filter((post) => post.id !== id );
+        setPosts(newPosts)
+    };
+
     return (
         <div className="home">
-            <PostList posts={posts} title="All Posts!" />
+            <PostList posts={posts} title="All Posts!" handleDelete={deletePost}/>
         </div>
     );
 }
