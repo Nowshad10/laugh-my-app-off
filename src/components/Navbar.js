@@ -6,7 +6,7 @@ const Navbar = () => {
                 <a href='/'>Home</a>
                 <a href='/create' style={{
                     color: 'white',
-                    backgroundColor: 'hotpink',
+                    backgroundColor: '#48D1CC',
                     borderRadius: '8px'
                 }}>Add Joke <i className="fa-solid fa-pen-nib" style={{color: "white"}}></i></a>
             </div>
