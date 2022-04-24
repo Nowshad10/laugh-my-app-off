@@ -109,3 +109,15 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* Not Found page */
+.not-found h2 {
+  color: #00CED1;
+  margin-bottom: 10px;
+  font-size: xx-large;
+}
+
+.not-found p {
+  margin-bottom: 10px;
+  font-size: large;
+}
