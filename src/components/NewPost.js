@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const NewPost = () => {
 
@@ -6,6 +7,7 @@ const NewPost = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,6 +21,9 @@ const NewPost = () => {
         .then(() => {
             console.log('New post successfully added.');
             setIsLoading(false);
+            // This is how you back to the previous page
+            // navigate(-1);
+            navigate('/');
         })
     };
 
