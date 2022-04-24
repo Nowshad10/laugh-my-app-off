@@ -27,6 +27,7 @@
   text-decoration: none;
   padding: 6px;
 }
+
 .navbar a:hover {
   color: #00CED1;
 }
@@ -51,4 +52,19 @@
   font-size: 20px;
   color: #48D1CC;
   margin-bottom: 8px;
+}
+
+.post-preview a {
+  text-decoration: none;
+}
+ 
+/* Single Post page */
+.post-details h2 {
+  font-size: 20px;
+  color: #48D1CC;
+  margin-bottom: 10px;
+}
+
+.post-details div {
+  margin: 20px 0;
 }
