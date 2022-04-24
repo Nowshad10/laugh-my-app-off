@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react';
 import PostList from './PostList';
 import useFetch from './useFetch';
 const Home = () => {
@@ -12,5 +11,5 @@ const Home = () => {
         </div>
     );
 }
- 
+
 export default Home;
