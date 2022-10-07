@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  client:
+    build: ./client
+    container_name: client_container
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/app
+      - ./app/node_modules
+    stdin_open: true
+    tty: true
+  api:
+    build: ./api
+    container_name: api_container
+    ports:
+      - 4000:4000
+    environment:
+      - PGUSER=postman
+      - PGPASSWORD=${PGPASSWORD}
+      - PGHOST=db
+      - PGDATABASE=library
+      - PGPORT=5432
+    depends_on:
+      - db
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+  db:
+    image: postgres:latest
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+      - "./api/db:/docker-entrypoint-initdb.d/:ro"
+    environment:
+      - POSTGRES_DB=library
+      - POSTGRES_USER=postman
+      - POSTGRES_PASSWORD=${PGPASSWORD}
+volumes:
+  dbdata:
+    
