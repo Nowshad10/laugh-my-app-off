@@ -4,8 +4,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the Laugh My App Off API!');
-});
+const postRoutes = require('./routes/postRoutes');
+app.use('/posts', postRoutes);
 
 module.exports = app;
