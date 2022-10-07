@@ -13,7 +13,7 @@ const NewPost = () => {
         e.preventDefault();
         const post = { title, body, author };
         setIsLoading(true);
-        fetch('http://localhost:8000/posts', {
+        fetch('http://localhost:4000/posts', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(post)

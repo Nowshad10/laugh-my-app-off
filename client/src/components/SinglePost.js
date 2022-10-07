@@ -5,11 +5,11 @@ import useFetch from './useFetch';
 const SinglePost = () => {
 
     const { id } = useParams();
-    const { data: post, error, isLoading } = useFetch(`http://localhost:8000/posts/${id}`);
+    const { data: post, error, isLoading } = useFetch(`http://localhost:4000/posts/${id}`);
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch(`http://localhost:8000/posts/${id}`, {
+        fetch(`http://localhost:4000/posts/${id}`, {
             method: 'DELETE'
         })
         .then(() => {
